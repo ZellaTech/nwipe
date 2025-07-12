@@ -95,10 +95,10 @@ int create_pdf( nwipe_context_t* ptr )
     //    float height;
     //    float page_width;
 
-    struct pdf_info info = { .creator = "https://github.com/PartialVolume/shredos.x86_64",
-                             .producer = "https://github.com/martijnvanbrummelen/nwipe",
+    struct pdf_info info = { .creator = "Zella Technologies",
+                             .producer = "Zella Wipe",
                              .title = "PDF Disk Erasure Certificate",
-                             .author = "Nwipe",
+                             .author = "Zella Wipe",
                              .subject = "Disk Erase Certificate",
                              .date = "Today" };
 
@@ -121,7 +121,7 @@ int create_pdf( nwipe_context_t* ptr )
     pdf = pdf_create( PDF_A4_WIDTH, PDF_A4_HEIGHT, &info );
 
     /* Create footer text string and append the version */
-    snprintf( pdf_footer, sizeof( pdf_footer ), "Disc Erasure by NWIPE version %s", version_string );
+    snprintf( pdf_footer, sizeof( pdf_footer ), "Disc Erasure by Zella Wipe version %s", version_string );
 
     pdf_set_font( pdf, "Helvetica" );
     struct pdf_object* page_1 = pdf_append_page( pdf );
@@ -154,7 +154,7 @@ int create_pdf( nwipe_context_t* ptr )
     /* Organisation Information */
 
     pdf_add_line( pdf, NULL, 50, 550, 550, 550, 1, PDF_GRAY );
-    pdf_add_text( pdf, NULL, "Organisation Performing The Disk Erasure", 12, 50, 630, PDF_BLUE );
+    pdf_add_text( pdf, NULL, "Organization Performing The Disk Erasure", 12, 50, 630, PDF_BLUE );
     pdf_add_text( pdf, NULL, "Business Name:", 12, 60, 610, PDF_GRAY );
     pdf_add_text( pdf, NULL, "Business Address:", 12, 60, 590, PDF_GRAY );
     pdf_add_text( pdf, NULL, "Contact Name:", 12, 60, 570, PDF_GRAY );

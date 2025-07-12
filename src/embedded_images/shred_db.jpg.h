@@ -6,7 +6,7 @@
 extern "C" {
 #endif
 
-extern const unsigned char bin2c_shred_db_jpg[27063];
+extern const unsigned char bin2c_shred_db_jpg[6690];
 
 #ifdef __cplusplus
 } /* extern "C" */
